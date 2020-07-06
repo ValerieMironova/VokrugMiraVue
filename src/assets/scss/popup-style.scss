@@ -1,0 +1,63 @@
+.popup {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  padding: 20px;
+  width: 400px;
+  height: 500px;
+  margin-left: -200px;
+  background: lavender;
+  border-radius: 4px;
+  z-index: 99999;
+  opacity: 1;
+  margin-bottom: 20px;
+  overflow-y: auto;
+  color: black;
+  &__title {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  &__close-button {
+    position: absolute;
+    right: 32px;
+    top: 10px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.4;
+    background: none;
+    border: none;
+    outline: none;
+    &_img {
+      width: 32px;
+      height: 32px;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__post {
+    margin: 10px auto;
+  }
+  &__order-form {
+    padding: 10px 0;
+    &__label {
+      font-size: 16px;
+      color: black;
+    }
+  }
+  &__btn {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+  }
+  &__btn-r {
+    color: black;
+    background-color: white;
+  }
+}
