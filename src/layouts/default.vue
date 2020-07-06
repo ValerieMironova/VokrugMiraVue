@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <div class="default-template">
         <header-component></header-component>
         <login-popup></login-popup>
         <register-popup></register-popup>
-        <main>
+        <main class="default-template__main">
             <slot>
             </slot>
         </main>
@@ -31,6 +31,15 @@
     }
 </script>
 
-<style>
-
+<style lang="scss">
+    .default-template {
+        &__main {
+            margin: 50px auto 30px auto;
+            padding: 0;
+            width: 1020px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
 </style>

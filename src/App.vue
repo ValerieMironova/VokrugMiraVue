@@ -17,7 +17,6 @@
 </script>
 
 <style lang="scss">
- @import "src/assets/scss/style.scss";
     body {
         padding: 0;
         margin: 0;

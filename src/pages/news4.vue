@@ -1,8 +1,7 @@
 <template>
-    <main class="main main-on-news-page">
-        <h1 class="main-on-news-page__title">ОДИН КАДР: БРАЗИЛИЯ</h1>
-        <div class="main-on-news-page__container">
-            <img src="@/assets/img/news4.1.jpg" class="main-on-news-page__img">
+    <news-container :title="'ОДИН КАДР: БРАЗИЛИЯ'"
+    :author="'Фото: КРИСТОФ КУРТО / NPL / LEGION-MEDIA'">
+            <news-image :src="require('@/assets/img/news4.1.jpg')" />
             <p><b>Яркое оперение — отличный камуфляж для бразильских тропиков, с их красочными цветами и фруктами, но
                 гиацинтовым ара броский наряд сослужил плохую службу.</b> Эти птицы — самые большие попугаи (длина с
                 хвостом
@@ -12,14 +11,19 @@
                 несмотря на жесткие меры борьбы, общемировой оборот от незаконной торговли животными и растениями
                 достигает
                 10 млрд долларов в год. Сейчас в Бразилии насчитывается всего около 5000 гиацинтовых ара.</p>
-            <p class="main-on-news-page__author">Фото: КРИСТОФ КУРТО / NPL / LEGION-MEDIA</p>
-        </div>
-    </main>
+    </news-container>
 </template>
 
 <script>
+    import NewsContainer from "../components/news-container";
+    import NewsImage from "@/components/news-image.vue";
+
     export default {
-        name: "news4"
+        name: "news4",
+        components: {
+            NewsContainer,
+            NewsImage
+        }
     }
 </script>
 

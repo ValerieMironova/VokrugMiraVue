@@ -1,12 +1,13 @@
 <template>
-    <main class="main">
-        <div class="main__news" v-for="(part, idx) in parts" v-bind:key="idx">
-            <router-link class="main__news-link" v-bind:to="part.address">
-                <img :src="part.image.src" :alt="part.image.alt" class="main__news-link_img"/>
-                <p class="main__news-title">{{part.title}}</p>
+    <div class="home">
+        <div class="home__news" v-for="(part, idx) in parts" v-bind:key="idx">
+            <router-link class="home__link" v-bind:to="part.address">
+                <img :src="part.image.src" :alt="part.image.alt" class="home__img"/>
+                <p class="home__title">{{part.title}}</p>
             </router-link>
         </div>
-    </main>
+    </div>
+
 </template>
 
 <script>
@@ -70,6 +71,49 @@
 
 </script>
 
-<style>
+<style lang="scss">
+    .home{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
+        &__news {
+            background-color: white;
+            height: 500px;
+            width: 300px;
+            margin-bottom: 40px;
+
+            &:hover {
+                opacity: 80%;
+            }
+        }
+
+        &__link{
+            color: black;
+            text-decoration: none;
+
+        }
+
+        &__img{
+            width: 100%;
+            height: 60%;
+        }
+
+        &__title {
+            font-size: 26px;
+            text-align: center;
+            padding: 10px;
+            text-transform: uppercase;
+            margin-top: 10px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &:active {
+                text-decoration: none;
+            }
+        }
+    }
 </style>

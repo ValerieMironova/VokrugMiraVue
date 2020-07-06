@@ -1,12 +1,10 @@
 <template>
-    <main class="main main-on-news-page">
-        <h1 class="main-on-news-page__title">НАЙДЕНА БЛИЖАЙШАЯ К ЗЕМЛЕ ЧЕРНАЯ ДЫРА</h1>
-        <div class="main-on-news-page__container">
+    <news-container :title="'НАЙДЕНА БЛИЖАЙШАЯ К ЗЕМЛЕ ЧЕРНАЯ ДЫРА'">
             <p>Группа астрономов из Европейской южной обсерватории (ESO) и других институтов обнаружила черную дыру
                 всего в
                 тысяче световых лет от Земли. Эта черная дыра ближе к Солнечной системе, чем все остальные, известные на
                 сегодняшний день. Она входит в тройную систему звезд, видимую невооруженным глазом.</p>
-            <img src="@/assets/img/news5.1.jpg" class="main-on-news-page__img">
+            <news-image :src="require('@/assets/img/news5.1.jpg')" />
             <p>Существование черной дыры ученые доказали, отслеживая движения двух ее звезд-компаньонов с помощью
                 2,2-метрового
                 телескопа MPG/ESO в обсерватории ESO Ла Силья в Чили. «Мы были поражены, когда поняли, что это первая
@@ -42,13 +40,19 @@
                 подсказывает,
                 где могут находиться многие скрытые черные дыры Млечного Пути.
             </p>
-        </div>
-    </main>
+    </news-container>
 </template>
 
 <script>
+    import NewsContainer from "../components/news-container";
+    import NewsImage from "@/components/news-image.vue";
+
     export default {
-        name: "news5"
+        name: "news5",
+        components: {
+            NewsContainer,
+            NewsImage
+        }
     }
 </script>
 

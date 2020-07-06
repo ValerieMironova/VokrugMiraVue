@@ -1,10 +1,9 @@
 <template>
-    <main class="main main-on-news-page">
-        <h1 class="main-on-news-page__title">ПЯТАЯ ГЕНЕРАЦИЯ: 10 ФАКТОВ О 5G</h1>
-        <div class="main-on-news-page__container">
+    <news-container title="'ПЯТАЯ ГЕНЕРАЦИЯ: 10 ФАКТОВ О 5G'"
+    :author="'Фото: Getty Images'">
             <p>Пятое поколение беспроводной связи — нечто большее, чем просто быстрый интернет в кармане. Возможно, эта
                 технология изменит мир до неузнаваемости.</p>
-            <img src="@/assets/img/news6.1.jpg" class="main-on-news-page__img">
+            <news-image :src="require('@/assets/img/news6.1.jpg')" />
             <p>5G — аббревиатура от английского fifth generation, «пятое поколение», то есть следующее за существующими
                 стандартами телекоммуникаций 4G. C приходом этой технологии эксперты обещают ускорение мобильной
                 передачи данных
@@ -44,7 +43,7 @@
                 мировую экономику, в этом сомневаться не приходится. Эксперты говорят о триллионах долларов новых
                 ежегодных
                 продаж, обеспеченных 5G.</p>
-            <img src="@/assets/img/news6.2.jpg" class="main-on-news-page__img">
+            <news-image :src="require('@/assets/img/news6.2.jpg')" />
             <p>А вот японцы хотят с помощью 5G отслеживать самочувствие дойных коров. Это должно упростить жизнь
                 фермерам,
                 особенно начинающим. В большом стаде уследить за молочными коровами бывает нелегко. При первых признаках
@@ -81,7 +80,7 @@
                 именно
                 его. В России частоты диапазона 3,4–3,8 ГГц в настоящее время используют силовые ведомства и
                 спецсвязь.</p>
-            <img src="@/assets/img/news6.3.jpg" class="main-on-news-page__img">
+            <news-image :src="require('@/assets/img/news6.3.jpg')" />
             <p>Перспектива распространения 5G уже не первый год волнует активистов из разных стран. Они тревожатся из-за
                 потенциально вредного воздействия технологии на организм человека: на нервную и репродуктивную системы и
                 не
@@ -103,15 +102,19 @@
                 есть свои плюсы. Пока же главными отечественными информационными поводами по части 5G остаются новые и
                 новые
                 удачные тесты.</p>
-
-            <p class="main-on-news-page__author">Фото: Getty Images</p>
-        </div>
-    </main>
+    </news-container>
 </template>
 
 <script>
+    import NewsContainer from "../components/news-container";
+    import NewsImage from "@/components/news-image.vue";
+
     export default {
-        name: "news6"
+        name: "news6",
+        components: {
+            NewsContainer,
+            NewsImage
+        }
     }
 </script>
 
